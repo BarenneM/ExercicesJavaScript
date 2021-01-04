@@ -27,10 +27,44 @@
       <script>
         //TODO
         //1 - Séléctionner l'éléments HTML 'bouton paramoteur' avec querySelector et le mettre dans une variable.
+        const boutonPara = document.querySelector('#paramoteur');
+        console.log(boutonPara);
         //2 - Séléctionner la liste ul 'multiaxe' avec querySelector et la mettre dans une variable.
+        const listeMultiAxee = document.querySelector('.multiaxe');
+        console.log(listeMultiAxee);
         //3 - Placer un 'micro' avec un addEventListener (click) sur l'élément HTML 'bouton paramoteur'
         //4 - Dans le callback de l'addEventListener, faire disparaitre le liste 'multiaxe' à l'aide de ce code: multiaxe.style.display = 'none'; Tester cette instruction dans la console du navigateur.
         //5 - Placer un 'debugger' dans le callback en cas de problème.
+        boutonPara.addEventListener('click', () => {
+          listeMultiAxee.style.display = 'none';
+        });
+
+        //1 - Séléctionner l'éléments HTML 'bouton multiaxe' avec querySelector et le mettre dans une variable.
+        const boutonMultiAxe = document.querySelector('#multiaxe');
+        console.log(boutonMultiAxe);
+        //2 - Séléctionner la liste ul 'paramoteur' avec querySelector et la mettre dans une variable.
+        const listePara = document.querySelector('.paramoteur');
+        console.log(listePara);
+        //3 - Placer un 'micro' avec un addEventListener (click) sur l'élément HTML 'bouton paramoteur'
+        //4 - Dans le callback de l'addEventListener, faire disparaitre le liste 'multiaxe' à l'aide de ce code: multiaxe.style.display = 'none'; Tester cette instruction dans la console du navigateur.
+        //5 - Placer un 'debugger' dans le callback en cas de problème.
+        boutonMultiAxe.addEventListener('click', () => {
+          listePara.style.display = 'none';
+        });
+
+
+        //1 - Séléctionner l'éléments HTML 'bouton all' avec querySelector et le mettre dans une variable.
+        const boutonAll = document.querySelector('#all');
+        console.log(boutonAll);
+
+        //2 - Placer un 'micro' avec un addEventListener (click) sur l'élément HTML 'bouton paramoteur'
+        //3 - Dans le callback de l'addEventListener, faire disparaitre le liste 'multiaxe' à l'aide de ce code: multiaxe.style.display = 'none'; Tester cette instruction dans la console du navigateur.
+        //4 - Placer un 'debugger' dans le callback en cas de problème.
+        boutonAll.addEventListener('click', () => {
+          listeMultiAxee.style.display = 'none';
+          listePara.style.display = 'none';
+        });
+
       </script>
   </body>
 </html>

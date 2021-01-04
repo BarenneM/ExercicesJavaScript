@@ -17,8 +17,18 @@
     <br>(voir menu-scroll-down.html)
     </h1>
   </div>
+
     <script>
-    //TODO
+    const menu = document.querySelector('#menu');
+    console.log(menu);
+
+    
+
+    
+    document.addEventListener('scroll', () => {
+      //console.log("scroll");
+      if (x>70) banniere.className = 'fixed-position';
+    });
     </script>
   </body>
 </html>

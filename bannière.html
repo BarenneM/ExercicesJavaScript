@@ -14,8 +14,26 @@
         <br>(voir bannière.html)
       </p>
     </div>
+
+    <div id="banniere">
+      <button id="fermer"> Fermer </button>
+    </div>
+
     <script>
-      //TODO
+      //1 Creer une banniere
+      const banniere = document.querySelector('#banniere');
+      //console.log(banniere);
+      //l'ajouter après 5 secondes
+      setTimeout(() => {
+        banniere.insertAdjacentHTML('beforeend', '<p>  lkjqhsdfp  kzjehfcmqhjEFMzejfôzehFPIQZEHFHQZEPFJZEQJFQEZHGFOUEGBFLJK </p>');
+      }, 1000);
+
+      const bouton = document.querySelector('#fermer');
+      bouton.addEventListener('click', () => {
+        banniere.style.display = "none";
+      });
     </script>
+
+    
   </body>
 </html>

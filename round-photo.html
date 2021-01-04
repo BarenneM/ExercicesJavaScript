@@ -2,6 +2,11 @@
 <html>
   <head>
     <link rel="stylesheet" href="./assets/stylesheet/css/round-photo.css">
+    <style>
+      .circle {
+            border-radius: 50%;
+      };
+    </style>
 </head>
   <body>
     <h1>Round photo</h1>
@@ -11,11 +16,27 @@
         <br> (voir round-photo.html)
       </p>
     </div>
-      <div id="photo1">
+      <div id="photo1" class = ombre>
         <img src="./assets/images/round-photo/photo1.jpg" width="20%">
       </div>
     <script>
-       //TODO
+       //1 Recuperer l'element image dans une constante
+       const image = document.querySelector('img');
+       console.log(image);
+
+       //2 Ajouter un listener sur l'image en survole
+       //3 modifier la classe par celle déjà créer dans le css
+        image.addEventListener('mouseover', () => {
+          console.log('over');
+          image.className = 'shadow';
+        })
+
+       //4 Ajouter un add listener sur l'image avec un onClick
+       //5 Faire les modification pour arrondirr l'image
+        image.addEventListener('click', () => {
+          //image.style.borderRadius = '50%';
+          image.classList.toggle('circle');
+        });
     </script>
   </body>
 </html>
