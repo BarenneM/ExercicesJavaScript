@@ -22,13 +22,17 @@
     const menu = document.querySelector('#menu');
     console.log(menu);
 
-    
+    document.addEventListener('scroll', () => {
+      console.log("scroll");
+      if (document.body.scrollTop > 127 || document.documentElement.scrollTop > 127) {
+        console.log(document.body.scrollTop);
+        console.log(document.documentElement.scrollTop);
+          menu.className = "fixed-position";
+      } 
+    });
 
     
-    document.addEventListener('scroll', () => {
-      //console.log("scroll");
-      if (x>70) banniere.className = 'fixed-position';
-    });
+
     </script>
   </body>
 </html>

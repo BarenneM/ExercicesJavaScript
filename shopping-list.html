@@ -20,7 +20,20 @@
       </form>
     <div id="maListeDeCourse"></div>
     <script>
-      //TODO
+
+      const bouton = document.querySelector('#bouton');
+      const listeCourse = document.querySelector('#maListeDeCourse');
+
+      bouton.addEventListener('click', () => {
+        console.log("clicked");
+
+        const butonValue = userInput.value;
+        console.log(butonValue);
+
+        listeCourse.insertAdjacentHTML('beforeend', '<li>' + butonValue + ' </li>');
+      })
+
+
     </script>
   </body>
 </html>
