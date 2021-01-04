@@ -18,11 +18,14 @@
         <button id="bouton">Envoyer</button>
         <button id="Supprime">Supprimer ma liste</button>
       </form>
-    <div id="maListeDeCourse"></div>
+    <div id="maListeDeCourse">
+      <ul></ul>
+    </div>
     <script>
 
       const bouton = document.querySelector('#bouton');
-      const listeCourse = document.querySelector('#maListeDeCourse');
+      const listeCourse = document.querySelector('#maListeDeCourse ul');
+      //console.log(listeCourse);
 
       bouton.addEventListener('click', () => {
         console.log("clicked");
